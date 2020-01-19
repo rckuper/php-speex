@@ -1,0 +1,7 @@
+ARG_ENABLE('speex', 'speex support', 'no');
+
+if (PHP_SPEEX != 'no') {
+	AC_DEFINE('HAVE_SPEEX', 1, 'speex support enabled');
+
+	EXTENSION('speex', 'speex.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
